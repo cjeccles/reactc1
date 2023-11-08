@@ -74,8 +74,8 @@ function SearchForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} id="search-form" className="flex items-center gap-3">
-            <input type="search" name="username" placeholder="Enter Github Username" className="border rounded-md p-2" />
+        <form onSubmit={handleSubmit} id="search-form" className="flex items-center gap-3 w-full">
+            <input type="search" name="username" placeholder="Enter Github Username" className="flex-grow border rounded-md p-2" />
             <button type="submit" className="bg-blue-400 text-white rounded px-4 py-2">Search</button>
         </form>
     )
@@ -104,8 +104,8 @@ export default function GithubApp() {
 
     return (
         <GithubAppProvider>
-            <div className="grid place-items-center w-full h-96">
-                <div>
+            <div className="grid place-items-center max-w-md mx-auto h-96">
+                <div className="w-full">
                     <SearchForm />
                     <ErrorMessage />
                     <UserDetails />
